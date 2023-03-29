@@ -58,10 +58,18 @@ class Carta {
   ];
 
   late final List<List<String>> cartaObjetivo = [
-    [flor[4], bug[3], bug[2]], [flor[0], flor[2], bug[0]], [flor[2], flor[2], bug[2]],
-    [flor[4], flor[4], flor[2]], [flor[1], flor[1], bug[3]], [bug[1], bug[3],bug[0]],
-    [flor[3], flor[0], bug[1]], [flor[1], flor[2], flor[4]], [flor[1], flor[3], bug[4]]
+    [flor[4], bug[3], bug[2],tipoCarta[1]], [flor[0], flor[2], bug[0],tipoCarta[1]], [flor[2], flor[2], bug[2],tipoCarta[1]],
+    [flor[4], flor[4], flor[2],tipoCarta[1]], [flor[1], flor[1], bug[3],tipoCarta[1]], [bug[1], bug[3],bug[0],tipoCarta[1]],
+    [flor[3], flor[0], bug[1],tipoCarta[1]], [flor[1], flor[2], flor[4],tipoCarta[1]], [flor[1], flor[3], bug[4],tipoCarta[1]]
   ];
 
-  
+  List revolverMazo(){
+    late final List<List<String>> cartasPartida;
+
+    cartasFlor.shuffle();
+    List<List<String>> cartasFlorPartida = cartasFlor;
+    cartasPartida.add(cartasFlorPartida);
+
+    return cartasPartida;
+  }
 }
